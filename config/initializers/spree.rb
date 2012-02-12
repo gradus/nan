@@ -10,3 +10,8 @@ Spree.config do |config|
   # Uncomment to override the default site name.
   # config.site_name = "Spree Demo Site"
 end
+
+Spree::AppConfiguration.class_eval do 
+  preference :paypal_express_local_confirm, :boolean, :default => true 
+end 
+
